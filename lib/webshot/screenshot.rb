@@ -56,9 +56,9 @@ module Webshot
 
         # Check response code
         status_code = page.driver.status_code.to_i
-        unless valid_status_code?(status_code, allowed_status_codes)
-          fail WebshotError, "Could not fetch page: #{url.inspect}, error code: #{page.driver.status_code}"
-        end
+        #unless valid_status_code?(status_code, allowed_status_codes)
+        #  fail WebshotError, "Could not fetch page: #{url.inspect}, error code: #{page.driver.status_code}"
+        #end
 
         tmp = Tempfile.new(["webshot", ".png"])
         tmp.close
